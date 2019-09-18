@@ -1,0 +1,245 @@
+*{
+	box-sizing: border-box; 
+	/* This makes the widths of elements more consistent
+		Full details here https://css-tricks.com/box-sizing/ */
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	margin: 0px; /* Often browsers have a 5px margin by deafult*/
+	font-family: sans-serif;
+}
+
+/*IMAGES*/
+
+.logosmallIMG{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 14%;
+	padding-top: 180px;
+	padding-bottom: 50px;
+}
+
+/*FORMATTING*/
+
+.container{
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-bottom: 10%;
+}
+
+/*SIDEBAR*/
+
+.sidebar{
+	height: 100%;
+ 	width: 0;
+	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	left: 0;
+  	background-color: #48699b;
+  	overflow-x: hidden;
+  	transition: 0.5s;
+  	padding-top: 80px;
+}
+
+.sidebar p{
+	transition: 0.3s;
+	display: block;
+	color: white;
+	padding-top: 60px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: 40px;
+}
+
+.sidebar .closeBtn{
+	position: absolute;
+	right: 25px;
+	font-size: 80px;
+	margin-left: 150px;
+	top: 30px;
+	color: white;
+}
+
+.border_right{
+	border-right: 1px solid #ccc !important;
+}
+
+.openSidebar{
+	padding: 8px 16px;
+	text-align: center;
+	font-size: 100px;
+	color: white;
+	background-color: #749ad0;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 60px;
+	position: fixed;
+}
+
+/*Animated sidebar created with help from W3Schools: How to - Side Navigation */
+
+/*GRIDS*/
+/*Grid help from W3schools and freecodecamp.org*/
+
+.grid{
+	display: grid;
+    grid-template-columns: repeat(2, 22vw);
+    grid-template-rows: repeat(2, 22vw);
+    grid-gap: 250px;
+    padding-left: 40px;
+}
+
+.grid> div> img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid> div> img:hover{
+	transform: scale(1.05); 
+	cursor: pointer;
+}
+
+/*MODALS*/
+/*From w3schools*/
+
+ .modal{
+  	display: none;
+  	position: fixed;
+  	z-index: 1;
+  	left: 0;
+  	top: 0;
+  	width: 100vw;
+  	height: 100vh;
+  	overflow-y: auto;
+  	background-color: rgb(0,0,0);
+  	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+	background-color: #749ad0; 
+  	margin: auto;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+  	padding: 35px;
+  	border: none;
+  	width: 60%;
+  	font-family: 'avenir-medium', sans-serif;
+  	font-weight: normal;
+  	color: white;
+}
+
+.modalGrid{
+	display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 20px;
+    padding: 1%;
+}
+
+/* Animation */
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+button :hover {
+	animation: bounce 1s;
+}
+
+
+/*MODAL CLOSE*/
+
+.close{
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.close: hover,
+.close: focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*TYPE*/
+
+h1{
+	font-family: 'YesevaOne-Regular', serif;
+	text-align: left;
+	font-size: 100px;
+}
+
+h2{
+	font-family: 'Gotham-Bold', sans-serif;
+	text-align: center;
+	font-size: 45px;
+	margin: 0px;
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	font-family: 'Gotham-Light', sans-serif;
+	text-align: center;
+	font-size: 40px;
+	margin: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+}
+
+i{
+	font-family: 'Gotham-Light', sans-serif;
+	text-align: left;
+	font-style: normal;
+	font-size: 15px;
+	display: block;
+	padding-top: 1vh;
+}
+
+/*FONTS*/
+
+@font-face{
+  	font-family: 'YesevaOne-Regular';
+	src: url('YesevaOne-Regular.ttf');
+  	font-weight: normal;
+}
+@font-face{
+  	font-family: 'Gotham-Bold';
+  	src: url('Gotham-Bold.otf');
+  	font-weight: normal;
+}
+
+@font-face{
+  	font-family: 'Gotham-Light';
+  	src: url('Gotham-Light.otf');
+  	font-weight: normal;
+}

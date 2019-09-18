@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Physical Traces Home</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Sidebar Content -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closeBtn" onclick="sidebar_close()"> &times; 
+  </a>
+
+  <a  href="index.html"> 
+    <p class="bar_item sidebarButton">Home</p> 
+  </a>
+
+  <a href="page1.html"> 
+    <p class="bar_item sidebarButton">About</p> 
+  </a>
+
+  <a href="page2.html"> 
+    <p class="bar_item sidebarButton">Your Digital Traces</p>
+  </a>
+
+  <a href="page3.html"> 
+    <p class="bar_item sidebarButton">History</p>
+  </a>
+
+  <a href="page4.html"> 
+    <p class="bar_item sidebarButton">View Traces Around You</p>
+  </a>
+</div>
+
+<!-- Nav Bar -->
+<btn class="openSidebar">
+	<h2 style= "float: left" onclick="sidebar_open()"> ☰ </h2>
+	<h2 style= "padding-right: 50px"> Physical Traces </h2>
+</btn>
+
+<!-- App Contents -->
+<div class="container">
+  <img class="logoIMG" src="img/logo.png">
+  <p> An augmented reality visualisation of the digital traces you leave behind online.
+  </p>
+</div>
+
+<script>
+function sidebar_open() {
+  document.getElementById("mySidebar").style.width = "350px";
+}
+
+function sidebar_close() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+</script>

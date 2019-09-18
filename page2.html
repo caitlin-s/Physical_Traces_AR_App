@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Digital Traces</title>
+	<link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+
+<body>
+
+<!-- Sidebar Content -->
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closeBtn" onclick="sidebar_close()"> &times; 
+  </a>
+
+  <a  href="index.html"> 
+    <p class="bar_item sidebarButton">Home</p> 
+  </a>
+
+  <a href="page1.html"> 
+    <p class="bar_item sidebarButton">About</p> 
+  </a>
+
+  <a href="page2.html"> 
+    <p class="bar_item sidebarButton">Your Digital Traces</p>
+  </a>
+
+  <a href="page3.html"> 
+    <p class="bar_item sidebarButton">History</p>
+  </a>
+
+  <a href="page4.html"> 
+    <p class="bar_item sidebarButton">View Traces Around You</p>
+  </a>
+</div>
+
+<!-- Nav Bar -->
+<btn class="openSidebar">
+	<h2 style= "float: left" onclick="sidebar_open()"> ☰ </h2>
+	<h2 style= "padding-right: 50px"> Physical Traces </h2>
+</btn>
+
+<!-- App Contents -->
+<div class="container">
+  <img class="logosmallIMG" src="img/logo_small.png">
+  <h2> Your Digital Traces </h2>
+  <p style="padding-bottom: 100px">
+    Traces data that various websites and apps have on you.
+  </p>
+
+  <!-- GRID and MODAL BUTTONS-->
+  <div class="grid">
+    <button id="myBtn" onclick="openModal ('modal1')"> <img src="img/facebook.png"> </button>
+    <button id="myBtn" onclick="openModal ('modal2')"> <img src="img/reddit.png"> </button>
+    <button id="myBtn" onclick="openModal ('modal3')"> <img src="img/instagram.png"> </button>
+    <button id="myBtn" onclick="openModal ('modal4')"> <img src="img/snapchat.png"> </button>
+    <button id="myBtn" onclick="openModal ('modal5')"> <img src="img/twitter.png"> </button>
+    <button id="myBtn" onclick="openModal ('modal6')"> <img src="img/pinterest.png"> </button>
+  </div>
+</div>
+
+<!-- MODAL CONTENT -->
+
+<!-- Facebook -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Facebook </h2>
+    <p>Liked 129 posts over past year</p>
+    <p>245 friends</p>
+    <p>Worked at McDonalds for 3 years</p>
+    <p>Enjoys eating at Burger Liquor on Saturdays</p>
+    <p>Last location is 26 Manners Street</p>
+  </div>
+</div>
+
+<!-- Reddit -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Reddit </h2>
+    <p>Recently visited r/funny</p>
+    <p>Visits r/aww regularly</p>
+    <p>Wants to lose 10kgs</p>
+    <p>Has a huskie called John</p>
+    <p>Plays DnD on Tuesday nights</p>
+    <p>Upvotes 21 posts on average each day</p>
+  </div>
+</div>
+
+<!-- Instagram -->
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Instagram </h2>
+    <p>21 years old</p>
+    <p>Follows #food</p>
+    <p>Wants a flower tattoo on thigh</p>
+    <p>Plays basketball</p>
+    <p>Follows 73 people</p>
+  </div>
+</div>
+
+<!-- Snapchat -->
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Snapchat </h2>
+    <p>Has 25 friends in Christchurch</p>
+    <p>Spends most of their time at University</p>
+    <p>Regularly watches Beauty Hacks' story</p>
+    <p>Sends an average of 141 snaps a day</p>
+  </div>
+</div>
+
+<!-- Twitter -->
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Twitter </h2>
+    <p>Follows 274 people</p>
+    <p>Disagrees with Labour Party</p>
+    <p>Interested in k-pop</p>
+    <p>Tweeted 72 times last year</p>
+    <p>Likes the Crusaders</p>
+  </div>
+</div>
+
+<!-- Pinterest -->
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()"> &times; </span>
+    <h2> Pinterest </h2>
+    <p>Has 15 boards</p>
+    <p>Wants to learn crochet</p>
+    <p>Interested in Hollow Knight</p>
+    <p>Is 20-25 years old</p>
+    <p>Reads Stephen King</p>
+  </div>
+</div>
+
+<!-- MODAL SCRIPT -->
+<!-- Code taken from previous project, with help from Stefan -->
+<script>
+var span = document.getElementsByClassName("close") [0];
+var modal;
+
+function openModal (modalID){
+  modal = document.getElementById(modalID);
+  modal.style.display = "block";
+}
+
+function closeModal(){
+  modal.style.display = "none";
+}
+
+span.onclick = function(){
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<!-- SIDEBAR SCRIPT -->
+<script>
+function sidebar_open() {
+  document.getElementById("mySidebar").style.width = "350px";
+}
+
+function sidebar_close() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+</script>
