@@ -107,6 +107,12 @@ body{
 	cursor: pointer;
 }
 
+button{
+	border:none;
+	outline:none;
+	background:none;
+}
+
 /*MODALS*/
 /*From w3schools*/
 

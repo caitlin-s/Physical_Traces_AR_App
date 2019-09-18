@@ -53,6 +53,12 @@ input{
 	color: white;
 }
 
+input{
+	border:none;
+	outline:none;
+	background:none;
+}
+
 /*SIDEBAR*/
 
 .sidebar{
