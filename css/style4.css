@@ -106,6 +106,18 @@ input{
 	position: fixed;
 }
 
+.hamburger{
+  	width: 40px;
+  	height: 5px;
+  	background-color: white;
+  	margin: 6px 0;
+}
+
+.hamburgerStyle{
+	float: left;
+	padding-top: 7px;
+}
+
 /*Animated sidebar created with help from W3Schools: How to - Side Navigation */
 
 /*GRIDS*/
